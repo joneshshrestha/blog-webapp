@@ -32,7 +32,7 @@ app.get("/posts/:post", function(req, res) {
   posts.forEach(post => {
     const requestdTitle = _.lowerCase(req.params.post);
     if (post.title === requestdTitle) {
-      console.log("Match found");
+      res.render("post", { post: post });
     } else {
       console.log("Match not found");
     }
