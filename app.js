@@ -26,6 +26,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/posts/:post', function (req, res) {
+  posts.forEach(post => {
+    if (post.title === req.params.post) {
+      console.log("Match found")
+    } else {
+      console.log("Match not found")
+    }
+  });
   console.log(req.params.post)
 })
 
