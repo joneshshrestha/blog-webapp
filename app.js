@@ -25,6 +25,10 @@ app.get('/', function (req, res) {
 
 })
 
+app.get('/posts/:post', function (req, res) {
+  console.log(req.params.post)
+})
+
 app.get('/about', function (req, res) {
   res.render('about', { about: aboutContent })
 })
